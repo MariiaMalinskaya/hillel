@@ -60,7 +60,7 @@ def delete_phone():
 
     cur = con.cursor()
     sql_query = '''
-    DELETE FROM phones
+    DELETE FROM phones WHERE contactName  = '{contact_Name}' AND phoneValue = '{phone_value}'
     '''
     cur.execute(sql_query)
     con.commit()
